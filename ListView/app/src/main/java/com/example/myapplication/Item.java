@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class Item extends CustomBaseAdapter {
     String[] gia;
     public Item(Context ctx, String[] listFood, int[] images, String[] gia) {
-        super( ctx,  listFood, images);
+        super(ctx,  listFood, images);
         this.gia = gia;
     }
 
@@ -18,14 +18,14 @@ public class Item extends CustomBaseAdapter {
         return false;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int i, View convertView, ViewGroup parent) {
         convertView =  inflater.inflate(R.layout.activity_custom_list_view, null);
         TextView nameTextView = (TextView) convertView.findViewById(R.id.textView);
         TextView desTextView = (TextView) convertView.findViewById(R.id.textView2);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
-        nameTextView.setText (listFood[position]);
-        desTextView.setText("Giá: " + gia[position]);
-        imageView.setImageResource(listImages[position]);
+        nameTextView.setText (listDish[i]);
+        desTextView.setText("Giá: " + gia[i]);
+        imageView.setImageResource(listImages[i]);
         return convertView;
     }
 }

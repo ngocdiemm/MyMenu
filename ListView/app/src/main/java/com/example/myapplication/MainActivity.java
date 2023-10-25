@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         params.weight = 2;
         left.setLayoutParams(params);
     }
+
     protected void handleListXml() {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) left.getLayoutParams();
         params.weight = 1;
